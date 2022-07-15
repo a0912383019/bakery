@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./maincontainer.css">
-    <link rel="stylesheet" href="./navbar.css">
-    <link rel="stylesheet" href="./speech.css">
-    <link rel="stylesheet" href="./four_block.css">
-    <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./icon_button.css">
-    <link rel="stylesheet" href="./main_list.css">
-    <link rel="stylesheet" href="./run_chat.css">
+    <link rel="stylesheet" href="./CSS/maincontainer.css">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/speech.css">
+    <link rel="stylesheet" href="./CSS/four_block.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/icon_button.css">
+    <link rel="stylesheet" href="./CSS/main_list.css">
+    <link rel="stylesheet" href="./CSS/run_chat.css">
 
     <style>
         * {
@@ -28,7 +28,7 @@
         }
 
         body {
-            background-image: url(./body_bg.png);
+            background-image: url(./img/body_bg.png);
         }
 
         a {
@@ -62,19 +62,11 @@
 
 <body>
     <div class="menu_container"> </div>
-    <i style="z-index: 2000; font-weight: 600;"> <a href="./menu.html">Bakery</a> </i>
+    <i style="z-index: 2000; font-weight: 600;"> <a href="./index.html">Bakery</a> </i>
 
     <ul id="navmenu">
-        <li><a href="./menu.html">MENU</a></li>
-        <li><a href="#">ABOUT US</a>
-        </li>
-        <li><a href="#">NEW NEWS</a></li>
-        <li><a href="#">ITEMS</a>
-            <ul class="sub1">
-                <li><a href="./chatbox.html" target="_blank">BREAD COMMENTS</a></li>
-                <li><a href="#">CAKE</a></li>
-            </ul>
-        </li>
+        <li><a href="./index.html">MENU</a></li>
+        <li><a href="./chatbox.html">CHATS</a></li>
         <li><a href="./random_plate.html" target="_blank">Spin to Win!</a></li>
     </ul>
 
@@ -84,7 +76,7 @@
     <div class="main_container">
         <div class="main_pic">
             <a href="./chatbox.html#aaa" target="_blank" id="link_place">
-                <img id="fst_PIC" src="tb800x.jpg">
+                <img id="fst_PIC" src="/img/tb800x.jpg">
             </a>
             <!-- <a href="./main_pic_link.html#pictwo" target="_blank">
                 <img id="fst_PIC" src="tb800x2.jpg">
@@ -239,7 +231,7 @@
         var getA = document.getElementById('link_place');
         console.log(getIMG.src);
         console.log(getIMG.getAttribute('src'));
-        var pic_arr = ['tb800x.jpg', 'tb800x2.jpg', 'tb800x3.jpg'];
+        var pic_arr = ['/img/tb800x.jpg', '/img/tb800x2.jpg', '/img/tb800x3.jpg'];
         var pic_src = ['chatbox.html#aaa', 'chatbox.html#bbb', 'chatbox.html#ccc'];
         var idx = 0;
         function changeBreadBack() {
