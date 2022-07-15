@@ -1,0 +1,152 @@
+.boxoneone {
+    float: left;
+    /* border: solid cadetblue 1px; */
+    width: 40%;
+    height: 400px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.boxoneone img {
+    width: 100%;
+    min-width: 390px;
+}
+
+.boxtwotwo {
+    float: left;
+    /* border: solid rgb(229, 129, 235) 1px; */
+    background-color: rgb(231, 72, 72);
+    width: 9%;
+    min-width: 159px;
+    height: 405px;
+    margin: 20px;
+    margin-right: 0px;
+    padding-left: 8px;
+}
+
+.boxthreethree {
+    float: left;
+    background-color: rgb(255, 216, 216);
+    border: solid rgb(243, 102, 102) 1px;
+    width: 21%;
+    min-width: 180px;
+    height: 387px;
+    margin-top: 20px;
+    padding: 8px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: auto;
+}
+
+span {
+    font-size: 0.5em;
+    color: darkred;
+}
+
+.inputbox {
+
+    float: left;
+    /* border: solid rgb(79, 25, 255) 1px; */
+    width: 40%;
+    margin-left: 40px;
+    height: 50px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 50px;
+    font-size: 1.2em;
+    margin: 4px 0;
+    display: inline-block;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=button] {
+    width: 100%;
+    background-color: #8a8a8a;
+    color: white;
+    padding: 10px 20px;
+    margin: 1px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media screen and (max-width:1000px) {
+
+    .boxoneone {
+    
+        max-height: 800px;
+        width: 75%;
+        min-width: 460px;
+        margin-left: 10px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding: 2px;
+
+    }
+
+    .boxoneone img {
+        min-height: 240px;
+    }
+
+    .boxtwotwo {
+        position: relative;
+        width: 82.5%;
+        margin-left: 10px;
+        top: -30px;
+        height: 45px;
+    }
+
+    .boxthreethree {
+        position: relative;
+        width:81%;
+        margin-left: 10px;
+        top: -70px;
+        height: 250px;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow: auto;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    .boxoneone {
+
+        width: 98%;
+        margin-left: 10px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding: 2px;
+        height: 400px;
+    }
+
+    .boxoneone img {
+        height: 240px;
+        overflow: hidden;
+    }
+
+    .boxtwotwo {
+        position: relative;
+        width: 96%;
+        margin-left: 10px;
+        top: -55px;
+        height: 45px;
+    }
+
+    .boxthreethree {
+        position: relative;
+        width:94.1%;
+        margin-left: 10px;
+        top: -95px;
+        height: 250px;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow: auto;
+    }
+    
+}

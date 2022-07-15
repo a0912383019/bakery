@@ -1,0 +1,88 @@
+
+        #navmenu {
+            /* border: 1px solid black; */
+
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        ul#navmenu li {
+            position: relative;
+            list-style-type: none;
+            width: 18%;
+            /* background-color: rgb(74, 74, 74); */
+            text-align: center;
+            font-size: 15pt;
+            float: left;
+            margin: 3px 1%;
+        }
+
+        ul#navmenu li ul.sub1 {
+            /* border: 1px solid black; */
+            position: absolute;
+            width: 100%;
+            min-width: 250px;
+            margin-top: 0px;
+            z-index: 101;
+            display: none;
+        }
+
+        ul#navmenu li ul.sub1 li {
+            margin-left: 7%;
+            /* background-color: rgb(78, 78, 78); */
+            width: 86%;
+            /* border: 1px solid black; */
+        }
+
+        ul#navmenu a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            color: aliceblue;
+            background-color: rgb(67, 67, 67);
+            border: 1px solid rgb(216, 216, 216);
+        }
+
+        ul#navmenu li:hover>a {
+            transform: scale(1.1);
+            background-color: rgb(117, 117, 117);
+        }
+
+        ul#navmenu li:hover a:hover {
+            background-color: rgb(165, 165, 165);
+        }
+
+        ul#navmenu li:hover .sub1 {
+            display: block;
+        }
+
+        @media screen and (max-width:960px){
+            #navmenu {
+                width: 96%;
+            }
+            ul#navmenu li {
+                width: 18%;
+                font-size: 11pt;
+            }
+            ul#navmenu li ul.sub1 li {
+                width: 150px;
+            }
+        
+        
+        }
+        @media screen and (max-width:500px){
+            #navmenu {
+                width: 90%;
+            }
+            ul#navmenu li {
+                width: 78px;
+                font-size: 10pt;
+            }
+            ul#navmenu li ul.sub1 li {
+                width: 140px;
+            }
+
+        }

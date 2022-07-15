@@ -1,0 +1,55 @@
+.run_chat{
+    position: relative;
+    width: 90%;
+    top: 150px;
+    background-color: rgb(224, 224, 224);
+    height: 250px;
+    border: 20px solid rgb(67, 67, 67);
+    border-radius: 100px;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    overflow: hidden;
+
+}
+
+.text_ani{
+
+    /* border: 1px black solid; */
+    padding-top: 20px;
+    animation: wordloop linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+    
+    /* animation-name: wordloop; */
+}
+
+.run_one{
+    padding-left: 0px;
+    animation-duration: 4.5s;
+}
+.run_sec{
+    padding-left: 100px;
+    animation-duration: 3.5s;
+}
+.run_three{
+    padding-left: 200px;
+    animation-duration: 4s;
+}
+
+@keyframes wordloop{
+    0% {
+        transform: translateX(400px);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width:1105px){
+
+    .run_chat{
+        visibility: collapse;
+    }
+
+}

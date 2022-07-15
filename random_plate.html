@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./card.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <style>
+        .title {
+            width: 700px;
+            text-align: center;
+        }
+
+        .bg {
+            /* position: absolute; */
+            width: 700px;
+            height: 700px;
+            /* border: 1px solid black; */
+            /* background-image: url(./cirle.png); */
+            background-size: contain;
+
+        }
+
+        .bg img {
+            width: 700px;
+            height: 700px;
+            position: absolute;
+            background-size: contain;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .an {
+            animation: 3s linear infinite;
+            animation-name: cowboy;
+            /* transform: rotate(360deg);  */
+
+        }
+
+        @keyframes shine {
+            0% {
+                color: aliceblue;
+                font-size: larger;
+            }
+
+            25% {
+                color: black;
+                /* font-size: smaller; */
+            }
+
+            50% {
+                color: aliceblue;
+                font-size: smaller;
+            }
+
+            75% {
+                color: black;
+                /* font-size: smaller; */
+            }
+
+            100% {
+                color: aliceblue;
+                font-size: larger;
+            }
+
+        }
+
+        .changefontcolor {
+            animation: 3s linear infinite;
+            animation-name: cowboy;
+            /* transform: rotate(360deg);  */
+
+        }
+
+        .lll {
+            position: relative;
+            top: 100px;
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid black; */
+            background-size: contain;
+            border-radius: 50%;
+            /* padding: 5px; */
+        }
+
+
+        .eee {
+            font-size: 1.1em;
+            font-family: 'Microsoft YaHei';
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid black; */
+            position: absolute;
+        }
+
+        .ppp {
+
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .pinsty {
+            position: absolute;
+            top: 275px;
+            left: 210px;
+            width: 300px;
+            height: 300px;
+            background-image: url(./arrow.png);
+            background-size: contain;
+            animation-name: loading;
+            animation-delay: 1s;
+            transition: 1.2s ease-in-out;
+            /* transform: rotate(45deg); */
+        }
+
+        .pinsty:hover {
+            transform: rotate(45deg);
+        }
+
+        .bntplace {
+            position: relative;
+            font-size: 24px;
+            width: 170px;
+            height: 40px;
+            left: 265px;
+            top: 200px;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            background-color: rgb(138, 185, 0);
+            outline: none;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .bntplace:hover {
+            background-color: #004802
+        }
+
+        .bntplace:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="title">
+        <h1>抽獎轉盤</h1>
+    </div>
+    <div class="bg">
+        <img src="./cirle.png" alt="" class="an" id="ana">
+
+        <div class="lll changefontcolor" id="fontcolor">
+
+            <div class="eee" style="transform: rotate(0deg);  text-align: center;">可頌麵包買一送一 </div>
+            <div class="eee" style="transform: rotate(0deg);">
+                <div class="ppp"
+                    style="position: static; display:table-cell; vertical-align:bottom;text-align: center;">
+                    吐司抱枕一個 </div>
+            </div>
+
+            <div class="eee" style="transform: rotate(45deg);  text-align: center; ">折價券50元</div>
+            <div class="eee" style="transform: rotate(45deg);">
+                <div class="ppp"
+                    style="position: static; display:table-cell; vertical-align:bottom;text-align: center;">
+                    貴賓卡一張 </div>
+            </div>
+
+            <div class="eee" style="transform: rotate(-45deg);  text-align: center; ">滿500現折100</div>
+            <div class="eee" style="transform: rotate(-45deg);">
+                <div class="ppp"
+                    style="position: static; display:table-cell; vertical-align:bottom;text-align: center;">
+                    蛋糕8折 </div>
+            </div>
+
+            <div class="eee" style="transform: rotate(270deg); text-align: center;">再接再厲</div>
+            <div class="eee" style="transform: rotate(-270deg); text-align: center;">再接再厲</div>
+
+
+            <!-- <div class="circle"></div> -->
+
+        </div>
+
+        <div id="pin" class="pinsty"></div>
+        <button onclick="ran_num()" class="bntplace">
+            tap me
+        </button>
+
+
+        <!-- -------------------------------------------------- -->
+        <!-- -------------------------------------------------- -->
+        <!-- -------------------------------------------------- -->
+        <!-- -------------------------------------------------- -->
+        <!-- -------------------------------------------------- -->
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-red box_one" id="box_one">
+                        <div class="inner">
+                            <h3> 恭喜中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>可頌麵包買一送一</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-btc" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-orange box_two" id="box_two">
+                        <div class="inner">
+                            <h3> 恭喜中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>折價券50元</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-yellow box_three" id="box_three">
+                        <div class="inner">
+                            <h3> 恭喜您沒中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>再接再厲</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-ils" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-green box_four" id="box_four">
+                        <div class="inner">
+                            <h3> 恭喜中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>蛋糕8折</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-jpy" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-blue box_five" id="box_five">
+                        <div class="inner">
+                            <h3> 恭喜中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>吐司抱枕一個</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-viacoin" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-grey box_six" id="box_six">
+                        <div class="inner">
+                            <h3> 恭喜中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>貴賓卡一張</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-rub" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-white box_seven" id="box_seven">
+                        <div class="inner">
+                            <h3> 恭喜您沒中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>再接再厲</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card-box bg-darkblue box_eight" id="box_eight">
+                        <div class="inner">
+                            <h3> 恭喜中獎！ </h3>
+                            <p> BAKERY </p>
+                            <h1>滿500現折100</h1>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-krw"></i>
+                        </div>
+                        <a href="#" class="card-box-footer">from Bootstrap</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+        var reward = ['可頌麵包買一送一', '折價券50元', '再接再厲', '蛋糕8折', '吐司抱枕一個', '貴賓卡一張', '再接再厲', '滿500現折100']
+
+        var min = 1;
+        var max = 8;
+        var i = 16;
+        var timeout;
+        var result = '';
+        var temp = 1;
+        function ran_num() {
+            // restart();
+            temp = Math.floor(Math.random() * (max - min + 1)) + min;
+            // document.getElementById('pin').style.transform = `rotate(${temp*0}deg)`;
+            console.log(temp);
+            console.log(reward[temp - 1]);
+
+            result = reward[temp - 1]
+            document.getElementById('pin').style.transform = `rotate(${(temp - 1) * 45 + (i * 360)}deg)`;
+            // document.getElementById('pin').style.animation.name = 'loading';
+            i = i + 16;
+            document.getElementById('ana').style.animation = "rotation 0.3s linear 4";
+            document.getElementById('fontcolor').style.animation = "shine 0.3s linear 4";
+            // console.log(i);
+
+            // timeout = setTimeout(call_alert, 1500);
+            timeout = setTimeout(see_card, 1500);
+
+        }
+        // var restart = function () {
+        //     document.getElementById('pin').style.transform = "rotate(0deg)";
+        //     console.log(555);
+        // }
+
+        // var call_alert = function () {
+        //     alert(`恭喜中獎!\n${result}`);
+        //     document.getElementById('ana').style.animation = "otation 1s linear infinite";
+        //     document.getElementById('fontcolor').style.animation = "hine 0.3s linear 3";
+
+        // }
+
+        var see_card = function () {
+
+
+            switch (temp) {
+
+                case 1:
+                    document.getElementById('box_one').style.animation = "card 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "visible";
+
+                    document.getElementById('box_two').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "hidden";
+                    document.getElementById('box_three').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "hidden";
+                    document.getElementById('box_four').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "hidden";
+                    document.getElementById('box_five').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "hidden";
+                    document.getElementById('box_six').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "hidden";
+                    document.getElementById('box_seven').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "hidden";
+                    document.getElementById('box_eight').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "hidden";
+                    break;
+
+                case 2:
+                    document.getElementById('box_two').style.animation = "card 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "visible";
+
+                    document.getElementById('box_one').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "hidden";
+                    document.getElementById('box_three').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "hidden";
+                    document.getElementById('box_four').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "hidden";
+                    document.getElementById('box_five').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "hidden";
+                    document.getElementById('box_six').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "hidden";
+                    document.getElementById('box_seven').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "hidden";
+                    document.getElementById('box_eight').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "hidden";
+                    break;
+
+                case 3:
+                    document.getElementById('box_three').style.animation = "card 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "visible";
+
+                    document.getElementById('box_two').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "hidden";
+                    document.getElementById('box_one').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "hidden";
+                    document.getElementById('box_four').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "hidden";
+                    document.getElementById('box_five').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "hidden";
+                    document.getElementById('box_six').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "hidden";
+                    document.getElementById('box_seven').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "hidden";
+                    document.getElementById('box_eight').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "hidden";
+                    break;
+
+                case 4:
+                    document.getElementById('box_four').style.animation = "card 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "visible";
+
+                    document.getElementById('box_two').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "hidden";
+                    document.getElementById('box_three').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "hidden";
+                    document.getElementById('box_one').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "hidden";
+                    document.getElementById('box_five').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "hidden";
+                    document.getElementById('box_six').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "hidden";
+                    document.getElementById('box_seven').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "hidden";
+                    document.getElementById('box_eight').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "hidden";
+                    break;
+
+                case 5:
+                    document.getElementById('box_five').style.animation = "card 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "visible";
+
+                    document.getElementById('box_two').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "hidden";
+                    document.getElementById('box_three').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "hidden";
+                    document.getElementById('box_four').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "hidden";
+                    document.getElementById('box_one').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "hidden";
+                    document.getElementById('box_six').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "hidden";
+                    document.getElementById('box_seven').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "hidden";
+                    document.getElementById('box_eight').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "hidden";
+                    break;
+
+                case 6:
+                    document.getElementById('box_six').style.animation = "card 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "visible";
+
+                    document.getElementById('box_two').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "hidden";
+                    document.getElementById('box_three').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "hidden";
+                    document.getElementById('box_four').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "hidden";
+                    document.getElementById('box_five').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "hidden";
+                    document.getElementById('box_one').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "hidden";
+                    document.getElementById('box_seven').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "hidden";
+                    document.getElementById('box_eight').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "hidden";
+                    break;
+
+                case 7:
+                    document.getElementById('box_seven').style.animation = "card 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "visible";
+
+                    document.getElementById('box_two').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "hidden";
+                    document.getElementById('box_three').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "hidden";
+                    document.getElementById('box_four').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "hidden";
+                    document.getElementById('box_five').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "hidden";
+                    document.getElementById('box_six').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "hidden";
+                    document.getElementById('box_one').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "hidden";
+                    document.getElementById('box_eight').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "hidden";
+                    break;
+
+                case 8:
+                    document.getElementById('box_eight').style.animation = "card 3s linear 1";
+                    document.getElementById('box_eight').style.visibility = "visible";
+
+                    document.getElementById('box_two').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_two').style.visibility = "hidden";
+                    document.getElementById('box_three').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_three').style.visibility = "hidden";
+                    document.getElementById('box_four').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_four').style.visibility = "hidden";
+                    document.getElementById('box_five').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_five').style.visibility = "hidden";
+                    document.getElementById('box_six').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_six').style.visibility = "hidden";
+                    document.getElementById('box_seven').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_seven').style.visibility = "hidden";
+                    document.getElementById('box_one').style.animation = "ard 3s linear 1";
+                    document.getElementById('box_one').style.visibility = "hidden";
+                    break;
+
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

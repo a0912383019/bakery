@@ -1,0 +1,41 @@
+.main_li{
+    position: relative;
+    width: 80%;
+    /* border: 1px solid black; */
+    margin-top: 2%;
+    margin-left: 5%;
+}
+.li_sec{
+    margin-left: 10%;
+}
+
+
+@media screen and (max-width:1105px){
+    .main_li{
+        float: right;
+        /* border: 1px solid black; */
+        width: 30%;
+        top: -60%;
+        /* margin-right: 3%; */
+       
+    }
+
+}
+@media screen and (max-width:860px){
+    .main_li{
+        float: none;
+        /* border: 1px solid black; */
+        width: 80%;
+        top: 0%;
+       
+    }
+
+}
+
+@media screen and (max-width:500px){
+    .main_li{
+        margin-top: 40px;
+       
+    }
+
+}

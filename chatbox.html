@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./chatboxone.css">
+    <link rel="stylesheet" href="./chatboxtwo.css">
+    <link rel="stylesheet" href="./chatboxthree.css">
+
+    <style>
+        
+        * {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body{
+            background-image: url(./img/bg4.jpg);
+            background-color:transparent;
+            /* opacity:1;  */
+        }
+        .tophead{
+            position: relative;
+            left: 80px;
+            width: 350px;
+            height: 50px;
+            /* background-image: linear-gradient(to top, #513561, #c9b1e7); */
+            /* border: 1px solid red; */
+            text-align: center;
+            padding: 10px;
+            /* margin: 10px auto; */
+
+        }
+
+        .pageend {
+            clear: both;
+            position: relative;
+            /* border: 1px solid black; */
+            background-color: rgb(145, 145, 145);
+            padding-top: 20px;
+            top: 30px;
+            width: 80%;
+            left: 9%;
+            min-height: 130px;
+            text-align: center;
+            color: aliceblue;
+        }
+        .hoho {
+            width: 300px;
+            height: 300px;
+            /* background-image: url(./img/runner_right.gif); */
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            left: 1100px;
+            animation-name: fst;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fst {
+            0% {
+                background-image: url(./img/runner_left.gif);
+                left: 1100px;
+                top: 0px;
+            }
+            50% {
+                
+                left: -600px;
+                top: 0px;
+            }
+            
+            100% {
+                background-image: url(./img/runner_right.gif);
+                left: 1100px;
+                top: 0px;
+            }
+
+            
+        }
+
+        .momo {
+            width: 300px;
+            height: 300px;
+            /* background-image: url(./img/runner_right.gif); */
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            left: 500px;
+            animation-name: sec;
+            animation-delay: 2s;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes sec {
+            0% {
+                background-image: url(./img/runr.gif);
+                left: 1100px;
+                top: 0px;
+            }
+            50% {
+                
+                left: -600px;
+                top: 0px;
+            }
+            
+            100% {
+                background-image: url(./img/runl.gif);
+                left: 1100px;
+                top: 0px;
+            }
+        }
+        .dodo {
+            width: 300px;
+            height: 300px;
+            /* background-image: url(./img/runll.gif); */
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            left: 500px;
+            animation-name: third;
+            animation-delay: 3s;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes third {
+            0% {
+                background-image: url(./img/runll.gif);
+                left: 1100px;
+                top: 0px;
+            }
+            50% {
+                
+                left: -600px;
+                top: 0px;
+            }
+            
+            100% {
+                background-image: url(./img/runrr.gif);
+                left: 1100px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="tophead"><h1 style="color: rgb(106, 14, 129);">Bread Comments</h1> </div>
+    <div class="boxone" id="aaa">
+        <img src="tb800x.jpg" alt="">
+        <input type="text" id="talk">
+        <input type="button" value="留言" id="ent">
+
+    </div>
+
+    <div class="boxtwo">
+        <h3>CHAT BOARD：</h3>
+    </div>
+
+    <div class="boxthree" id="scrollline">
+        <p id="chatBread" style="text-align: left;">到底為甚麼這麼好吃?
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>口感紮實，用料實在，能感受到師傅的用心。這應該算在地美食了吧~
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>我一天可以吃三個，我爸每天都要吃好幾個...
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>不錯!
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>如果滿分是十分，那這個一定超過一百分!!!很少吃到這麼酥脆的麵包，難怪我爸媽可以買了10年還不膩&gt; &lt;
+            <br><span>2022/4/15上午9:47:57</span>
+        </p>
+
+    </div>
+    <div style="clear: both;"></div>
+
+
+    <!-- <br><br><br><br><br> -->
+    <div id="gogo" class="hoho"></div>
+    <br><br>
+
+
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+
+
+    <div class="boxoneone" id="bbb">
+        <img src="tb800x2.jpg" alt="">
+        <input type="text" id="talko">
+        <input type="button" value="留言" id="ento">
+
+    </div>
+
+    <div class="boxtwotwo">
+        <h3>CHAT BOARD：</h3>
+    </div>
+
+    <div class="boxthreethree" id="scrolllineo">
+        <p id="chatBreado" style="text-align: left;">到底為甚麼這麼好吃?
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>口感紮實，用料實在，能感受到師傅的用心。這應該算在地美食了吧~
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>我一天可以吃三個，我爸每天都要吃好幾個...
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>不錯!
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>如果滿分是十分，那這個一定超過一百分!!!很少吃到這麼酥脆的麵包，難怪我爸媽可以買了10年還不膩&gt; &lt;
+            <br><span>2022/4/15上午9:47:57</span>
+        </p>
+
+    </div>
+    <div style="clear: both;"></div>
+
+    <!-- <br><br><br><br><br> -->
+    <div id="gogo" class="momo"></div>
+    <br><br>
+
+
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------- -->
+
+
+
+    <div class="boxoneoneone" id="ccc">
+        <img src="tb800x3.jpg" alt="">
+        <input type="text" id="talkoo">
+        <input type="button" value="留言" id="entoo">
+
+    </div>
+
+    <div class="boxtwotwotwo">
+        <h3>CHAT BOARD：</h3>
+    </div>
+
+    <div class="boxthreethreethree" id="scrolllineoo">
+        <p id="chatBreadoo" style="text-align: left;">到底為甚麼這麼好吃?
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>口感紮實，用料實在，能感受到師傅的用心。這應該算在地美食了吧~
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>我一天可以吃三個，我爸每天都要吃好幾個...
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>不錯!
+            <br><span>2022/4/15上午9:47:57</span>
+            <br><br>如果滿分是十分，那這個一定超過一百分!!!很少吃到這麼酥脆的麵包，難怪我爸媽可以買了10年還不膩&gt; &lt;
+            <br><span>2022/4/15上午9:47:57</span>
+        </p>
+
+    </div>
+    <div style="clear: both;"></div>
+
+    <!-- <br><br><br><br><br> -->
+    <div id="gogo" class="dodo"></div>
+    <br><br>
+
+
+    <div class="pageend">
+        <b>聯絡我們</b>
+        <br>
+        電話 ： 04-55223509
+        <br>
+        客服時間 ： 10:00-17:00
+        <br>
+        Mail ： CocoBread@gmail.com
+        <br>
+        地址 ： 台中市北屯區溪連路二段44巷22號
+    </div>
+
+    <script>
+
+        var chatbox1 = document.getElementById('chatBread').innerHTML;
+        console.log(chatbox1);
+
+
+        // function _key() {
+        //     if (event.keyCode == 13)
+        //         ent.onclick();
+        // }
+
+        var input = document.getElementById("talk");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                ent.onclick();
+            }
+        });
+
+        ent.onclick = function () {
+            var talkwhat = document.getElementById('talk').value;
+            console.log(talkwhat);
+
+            document.getElementById('chatBread').innerHTML += ` <br><br>${talkwhat}<br><span>${nowdate + nowtime}</span>`;
+            document.getElementById('talk').value = '';
+            var down = document.getElementById('scrollline');
+            down.scrollTop = down.scrollHeight;
+
+            localStorage.fst = talkwhat;
+            localStorage.time = nowdate + nowtime;
+
+        }
+
+        // function add() {
+        //     var down = document.getElementById('scrollline');
+        //     down.scrollTop = down.scrollHeight;
+        // }
+        // add();
+
+        var nowday = new Date();
+        var nowdate = nowday.toLocaleDateString().fontsize('0.5em');
+        var nowtime = nowday.toLocaleTimeString().fontsize('0.5em');
+        console.log(nowdate + nowtime);
+
+
+
+    </script>
+
+    <script>
+
+        var chatbox2 = document.getElementById('chatBreado').innerHTML;
+        console.log(chatbox2);
+
+
+        // function _keya() {
+        //     if (event.keyCode == 13)
+        //         ento.onclick();
+        // }
+
+        var inputo = document.getElementById("talko");
+        inputo.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                ento.onclick();
+            }
+        });
+
+        ento.onclick = function () {
+            var talkwhato = document.getElementById('talko').value;
+            console.log(talkwhato);
+
+            document.getElementById('chatBreado').innerHTML += ` <br><br>${talkwhato}<br><span>${nowdateo + nowtimeo}</span>`;
+            document.getElementById('talko').value = '';
+            var downo = document.getElementById('scrolllineo');
+            downo.scrollTop = downo.scrollHeight;
+
+            localStorage.sec = talkwhato;
+            localStorage.timee = nowdateo + nowtimeo;
+            
+
+        }
+
+        // function add() {
+        //     var downo = document.getElementById('scrolllineo');
+        //     downo.scrollTop = downo.scrollHeight;
+        // }
+        // add();
+
+        var nowdayo = new Date();
+        var nowdateo = nowdayo.toLocaleDateString().fontsize('0.5em');
+        var nowtimeo = nowdayo.toLocaleTimeString().fontsize('0.5em');
+        console.log(nowdateo + nowtimeo);
+
+
+
+    </script>
+
+    <script>
+
+        var chatbox3 = document.getElementById('chatBreadoo').innerHTML;
+        console.log(chatbox3);
+
+
+        // function _keya() {
+        //     if (event.keyCode == 13)
+        //         ento.onclick();
+        // }
+
+        var inputoo = document.getElementById("talkoo");
+        inputoo.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                entoo.onclick();
+            }
+        });
+
+        entoo.onclick = function () {
+            var talkwhatoo = document.getElementById('talkoo').value;
+            console.log(talkwhatoo);
+
+            document.getElementById('chatBreadoo').innerHTML += ` <br><br>${talkwhatoo}<br><span>${nowdateoo + nowtimeoo}</span>`;
+            document.getElementById('talkoo').value = '';
+            var downoo = document.getElementById('scrolllineoo');
+            downoo.scrollTop = downoo.scrollHeight;
+
+            localStorage.three = talkwhatoo;
+            localStorage.timeee = nowdateoo + nowtimeoo;
+
+        }
+
+        // function add() {
+        //     var downoo = document.getElementById('scrolllineoo');
+        //     downoo.scrollTop = downoo.scrollHeight;
+        // }
+        // add();
+
+        var nowdayoo = new Date();
+        var nowdateoo = nowdayoo.toLocaleDateString().fontsize('0.5em');
+        var nowtimeoo = nowdayoo.toLocaleTimeString().fontsize('0.5em');
+        console.log(nowdateoo + nowtimeoo);
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.more_item{
+    
+    width: 100%;
+    margin-top: 40px;
+    min-height: 220px;
+    /* border: 1px black solid; */
+    
+}
+.one-third{
+    margin: 1% ;
+    width: 22.5%;
+    height: 500px;
+    border: 2px rgb(139, 15, 15) solid;
+    float: left;
+}
+
+.one-third img{
+    width: 100%;
+}
+.one-third h2{
+    text-align: center;
+}
+.one-third p{
+    padding-left: 9px;
+}
+@media screen and (max-width:1250px){
+    .more_item{
+        margin-top: 50px;       
+    }
+    .one-third{
+        
+        width: 40%;
+        margin:40px 4% ;
+    }
+
+
+}
+@media screen and (max-width:500px){
+    .one-third{
+        float: none;
+        width: 90%;
+        height: 550px;
+        margin:20px 3% ;
+    }
+
+}

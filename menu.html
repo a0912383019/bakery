@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./maincontainer.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./speech.css">
+    <link rel="stylesheet" href="./four_block.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./icon_button.css">
+    <link rel="stylesheet" href="./main_list.css">
+    <link rel="stylesheet" href="./run_chat.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+        body {
+            font-family: 'Helvetica', 'Arial', 'Noto Sans TC', '黑體-繁', '微軟正黑體', sans-serif !important;
+        }
+
+        body {
+            background-image: url(./body_bg.png);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        i {
+            position: absolute;
+            top: 90px;
+            width: 100%;
+            font-size: 4.5rem;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .menu_container {
+            position: relative;
+            width: 100%;
+            height: 270px;
+            background-image: url(./img/background.png);
+            z-index: 1000;
+            overflow-y: hidden;
+            opacity: 1;
+            clear: both;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="menu_container"> </div>
+    <i style="z-index: 2000; font-weight: 600;"> <a href="./menu.html">Bakery</a> </i>
+
+    <ul id="navmenu">
+        <li><a href="./menu.html">MENU</a></li>
+        <li><a href="#">ABOUT US</a>
+        </li>
+        <li><a href="#">NEW NEWS</a></li>
+        <li><a href="#">ITEMS</a>
+            <ul class="sub1">
+                <li><a href="./chatbox.html" target="_blank">BREAD COMMENTS</a></li>
+                <li><a href="#">CAKE</a></li>
+            </ul>
+        </li>
+        <li><a href="./random_plate.html" target="_blank">Spin to Win!</a></li>
+    </ul>
+
+    <img src="./img/white-arrow-left.png" alt=">" id="icon1" onclick="changeBreadFront()" class="iconbtn">
+    <img src="./img/white-arrow-right.png" alt=">" id="icon" onclick="changeBreadBack()" class="iconbtn">
+    <img src="./img/white-arrow-down.png" alt=">" id="icon2" onclick="changeBreadBack()" class="iconbtn">
+    <div class="main_container">
+        <div class="main_pic">
+            <a href="./chatbox.html#aaa" target="_blank" id="link_place">
+                <img id="fst_PIC" src="tb800x.jpg">
+            </a>
+            <!-- <a href="./main_pic_link.html#pictwo" target="_blank">
+                <img id="fst_PIC" src="tb800x2.jpg">
+            </a>
+            <a href="./main_pic_link.html#picthree" target="_blank">
+                <img id="fst_PIC" src="tb800x3.jpg">
+            </a> -->
+
+        </div>
+        <div class="main_item_pic">
+            <div class="article">
+                <!-- <h3>main i</h3> -->
+                <img src="./img/oneoone.jpg" alt="">
+                <h3>菠蘿茶香</h3>
+                <hr style="border: 1px rgb(255, 255, 255) solid; width:40%;">
+                <h4>層層交疊充滿層次的丹麥麵糰，烘烤後微甜的麵包香氣，令人忍不住用手撕了好幾塊準備大快朵頤!</h4>
+                <div class="main_li">
+                    <ul>
+                        <li>保存方式
+                            <ul class="li_sec">
+                                <li> 常溫商品可保存 1~2日，如未食用完需密封包裝冷凍保存。</li>
+                                <li>可頌類：冷凍保存約 2週。</li>
+                                <li>麵包類：冷凍保存約 3週。</li>
+                                <li>甜點類：冷藏保存 3天。 </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div style="clear: both;"></div>
+            <div class="article">
+                <!-- <h3>main ii</h3> -->
+                <img src="./img/whole-wheat-cereal-bread-1024.webp" alt="">
+                <h3>法國魔杖</h3>
+                <hr style="border: 1px rgb(255, 255, 255) solid; width:40%;">
+                <h4>外酥內軟、無蛋無糖無油，純麵糰烘烤全素食者可吃，嚼勁十足的麵包。</h4>
+                <div class="main_li">
+                    <ul>
+                        <li>保存方式
+                            <ul class="li_sec">
+                                <li> 常溫商品可保存 1~2日，如未食用完需密封包裝冷凍保存。</li>
+                                <li>可頌類：冷凍保存約 2週。</li>
+                                <li>麵包類：冷凍保存約 3週。</li>
+                                <li>甜點類：冷藏保存 3天。 </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="open_hours">
+            <b style="font-size: 1.4em;">營業時間(異動時間會更新在下方)</b>
+            <img src="./img/hour.jpg" alt="">
+
+            <p style="font-size: 1.2em;" id="open_article">
+                因應新冠肺炎疫情日漸升溫 <br>
+                本店將於即日起調整營業時間至<br>
+                每週一到週日 12:00 - 20:00<br>
+                大家也可以外帶享用美食喔！</p>
+
+
+            <div class="run_chat">
+                <h1>NEW COMMENTS</h1>
+
+                <h2 type="text" class="text_ani run_one" id="txtReceive" style="color: black;"></h2>
+                <h2 class="text_ani run_sec" id="txtReceivee" style="color: black;"></h2>
+                <h2 class="text_ani run_three" id="txtReceiveee" style="color: black;"></h2>
+
+            </div>
+        </div>
+
+
+
+
+        <div style="clear: both;"></div>
+
+        <div class="speech">
+
+            <em>堅持使用有機食材給客人最健康的體驗，比利時的橄欖油飄出最農的純香，加上十年工夫的師傅造就出經久不衰的美味</em>
+            <br>
+            <em>因為有了麵包，所以</em>
+            <br>
+            <em>隔壁的女孩</em>
+            <br>
+            <em> 能聞到你心裡的善良</em>
+        </div>
+
+        <div class="more_item">
+
+            <!--/one-third-->
+            <div class="one-third" style="background-color: rgb(232, 160, 160);">
+                <img src="./img/300_0.jpg" alt="" />
+                <h2>巴布羅</h2>
+                <hr style="width:60%; border: 1px solid rgb(122, 0, 0); margin: 0px auto 10px auto;">
+
+                <p>金黃色的墨西哥奶酥外皮，加上純鮮奶麵糰，內無包餡，但口感超綿密。</p>
+
+            </div>
+
+            <!-- one-third -->
+            <div class="one-third one-fourth-second" style="background-color: rgb(255, 215, 215);">
+                <img src="./img/300_1.jpg" alt="" />
+                <h2>蜜豆小甜心</h2>
+                <hr style="width:60%; border: 1px solid rgb(122, 0, 0); margin: 0px auto 10px auto;">
+
+                <p>柔軟麵包包著甜蜜奶酥餡和可口綿密黑豆，一口咬下宛如在品嘗豆奶，高雅的甜味令人愛不釋口! <br>
+                    *台灣國產雜糧蜜黑豆使用*</p>
+            </div>
+
+            <!-- one-third -->
+            <div class="one-third one-fourth-third" style="background-color: rgb(232, 160, 160);">
+                <img src="./img/300_2.jpg" alt="" />
+                <h2>芋頭蛋糕</h2>
+                <hr style="width:60%; border: 1px solid rgb(122, 0, 0); margin: 0px auto 10px auto;">
+
+                <p>香芋蛋糕加上純芋泥餡，每口都有著滿滿的芋香風味。</p>
+            </div>
+
+            <!--/one-third-->
+            <div class="one-third one-fourth-last" style="background-color: rgb(255, 215, 215);">
+                <img src="./img/300_3.jpg" alt="" />
+                <h2>橡木桶果釀</h2>
+                <hr style="width:60%; border: 1px solid rgb(122, 0, 0); margin: 0px auto 10px auto;">
+
+                <p>酥脆的外皮，包裏著藍莓起士餡，香甜而不膩的好滋味。</p>
+            </div>
+            <!--/one-third-->
+        </div>
+    </div>
+
+    <div class="pageend">
+        <b>聯絡我們</b>
+        <br>
+        電話 ： 04-55223509
+        <br>
+        客服時間 ： 10:00-17:00
+        <br>
+        Mail ： CocoBread@gmail.com
+        <br>
+        地址 ： 台中市北屯區溪連路二段44巷22號
+    </div>
+
+
+    <script>
+
+        var getIMG = document.getElementById('fst_PIC');
+        var getA = document.getElementById('link_place');
+        console.log(getIMG.src);
+        console.log(getIMG.getAttribute('src'));
+        var pic_arr = ['tb800x.jpg', 'tb800x2.jpg', 'tb800x3.jpg'];
+        var pic_src = ['chatbox.html#aaa', 'chatbox.html#bbb', 'chatbox.html#ccc'];
+        var idx = 0;
+        function changeBreadBack() {
+            idx++;
+            if (idx >= 3) {
+                idx = 0
+            }
+
+            console.log(`${pic_arr[idx]}`);
+            getIMG.src = pic_arr[idx];
+            getA.href = pic_src[idx];
+        }
+
+        function changeBreadFront() {
+            idx--;
+            if (idx < 0) {
+                idx = 2
+            }
+            console.log(idx);
+
+            console.log(`${pic_arr[idx]}`);
+            getIMG.src = pic_arr[idx];
+            getA.href = pic_src[idx];
+        }
+        var c;
+        var start = function () {
+            c = setInterval(time, 2500);
+        }
+
+        var x = 1;
+        function time() {
+
+            console.log(`---------${x}秒`);
+            x++;
+
+            idx++;
+            if (idx >= 3) {
+                idx = 0
+            }
+
+
+            console.log(`${pic_arr[idx]}`);
+            getIMG.src = pic_arr[idx];
+            getA.href = pic_src[idx];
+        }
+        start();
+
+
+
+
+    </script>
+
+    <script>
+        var value = localStorage["fst"];
+        var timevalue = localStorage["time"];
+
+        console.log(value);
+        // temp = true;
+        if (typeof (value) != 'undefined') {
+            document.getElementById('txtReceive').innerHTML = `${value}  ${timevalue}`;
+        }
+        else {
+            document.getElementById('txtReceive').innerHTML = '麵包超人來抓人囉!!';
+        }
+
+
+        // localStorage.clear();
+
+
+    </script>
+
+    <script>
+        var valuee = localStorage["sec"];
+        var timevaluee = localStorage["timee"];
+
+        console.log(valuee);
+        // temp = true;
+        if (typeof (valuee) != 'undefined') {
+            document.getElementById('txtReceivee').innerHTML = `${valuee}  ${timevaluee}`;
+        }
+        else {
+            document.getElementById('txtReceivee').innerHTML = '這家麵包店可以上市了><';
+        }
+
+
+    // localStorage.clear();
+
+
+    </script>
+
+    <script>
+        var valueee = localStorage["three"];
+        var timevalueee = localStorage["timeee"];
+
+        console.log(valueee);
+        // temp = true;
+        if (typeof (valueee) != 'undefined') {
+            document.getElementById('txtReceiveee').innerHTML = `${valueee}  ${timevalueee}`;
+        }
+        else {
+            document.getElementById('txtReceiveee').innerHTML = 'I LOVE SEAFOOD';
+        }
+
+
+    // localStorage.clear();
+
+
+    </script>
+</body>
+
+</html>
